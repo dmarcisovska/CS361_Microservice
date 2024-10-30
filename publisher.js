@@ -7,8 +7,9 @@ async function run() {
   console.log("Publisher bound to port 3000")
 
   while (true) {
-    console.log("sending a multipart message envelope")
-    await sock.send(["kitty cats", "meow!"])
+    const currentDate = new Date().toLocaleString();
+    console.log("sending the current date and time")
+    await sock.send(["current_time", currentDate])
     await new Promise(resolve => {
       setTimeout(resolve, 500)
     })
