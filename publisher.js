@@ -16,8 +16,23 @@ async function run() {
     const hours = now.getHours();
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
-    console.log("sending the current date and time");
-    await sock.send(["current_time", currentDate]);
+
+    const messages = {
+      current_date: currentDate,
+      current_year: year.toString(),
+      current_month: month.toString(),
+      current_day: date.toString(),
+      current_time: `${hours}:${minutes}:${seconds}`,
+      current_hours: hours.toString(),
+      current_minutes: minutes.toString(),
+      current_seconds: seconds.toString(),
+    }
+
+    for (const [topic, message] of Object.entries(messages)) {
+      console.log(`Sending ${topic}: ${message}`);
+      await sock.send([topic, message]);
+    }
+
     await new Promise((resolve) => {
       setTimeout(resolve, 500);
     });
