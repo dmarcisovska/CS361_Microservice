@@ -1,4 +1,13 @@
+
 {
+  "name": "current-date-time-microservice",
+  "version": "1.0.0",
+  "description": "Gets the current date and / or time",
+  "type": "module",
+  "main": "publisher.js",
+  "scripts": {
+    "start": "node publisher.js"
+  },
   "dependencies": {
     "zeromq": "^6.1.1"
   }
