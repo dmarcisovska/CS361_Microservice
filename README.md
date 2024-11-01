@@ -41,7 +41,7 @@ The microservice publishes messages on the following topics:
 To receive messages from this microservice publisher, you need a ZeroMQ subscriber that connects to tcp://127.0.0.1:3000 and subscribes to date and time formats you need. Here’s an example:
 
 ```
-const zmq = require("zeromq");
+import zmq from "zeromq";
 
 async function run() {
   const sock = new zmq.Subscriber();

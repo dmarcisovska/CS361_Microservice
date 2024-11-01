@@ -1,4 +1,4 @@
-const zmq = require("zeromq");
+import zmq from "zeromq";
 
 async function run() {
   const sock = new zmq.Publisher();
