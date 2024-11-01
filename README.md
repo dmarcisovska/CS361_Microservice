@@ -20,3 +20,22 @@ npm install
 npm start
 ```
 
+This command will start a ZeroMQ publisher bound to tcp://127.0.0.1:3000. You’ll see console logs for each message sent, with different date and time formats.
+
+## Topics and Message Formats
+The microservice publishes messages on the following topics:
+
+- current_date: The full current date and time in the local format (e.g., MM/DD/YYYY, HH:MM:SS AM/PM)
+- current_year: The current year (e.g., 2024)
+- current_month: The current month as a number (e.g., 11 for November)
+- current_day: The current day of the month (e.g., 1 for the 1st)
+- current_date_formatted: The date in Month Day, Year format (e.g., November 1, 2024)
+- current_date_slashes_formatted: The date in MM/DD/YYYY format (e.g., 11/01/2024)
+- current_time: The current time as HH:MM:SS (e.g., 15:30:15)
+- current_hours: The current hour (e.g., 9)
+- current_minutes: The current minute (e.g., 30)
+- current_seconds: The current second (e.g., 15)
+
+
+
+
