@@ -4,7 +4,6 @@ This microservice provides the current date and time information in a few differ
 
 ## Prerequisites
 - **Node.js** installed on your system
-- **ZeroMQ** library installed as a dependency
 
 ## Installation
 
