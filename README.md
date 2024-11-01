@@ -36,6 +36,32 @@ The microservice publishes messages on the following topics:
 - current_minutes: The current minute (e.g., 30)
 - current_seconds: The current second (e.g., 15)
 
+## Example Subscriber Code
+
+To receive messages from this microservice publisher, you need a ZeroMQ subscriber that connects to tcp://127.0.0.1:3000 and subscribes to date and time formats you need. Here’s an example:
+
+```
+const zmq = require("zeromq");
+
+async function run() {
+  const sock = new zmq.Subscriber();
+  sock.connect("tcp://127.0.0.1:3000");
+
+  // Subscribe to specific topics (e.g., current_date, current_time)
+  sock.subscribe("current_date");
+  sock.subscribe("current_time");
+  sock.subscribe("current_date_formatted");
+  sock.subscribe("current_date_slashes_formatted");
+
+  for await (const [topic, message] of sock) {
+    console.log(`Received ${topic.toString()}: ${message.toString()}`);
+  }
+}
+
+run();
+
+```
+
 
 
 
