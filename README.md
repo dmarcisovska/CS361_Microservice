@@ -62,6 +62,7 @@ run();
 
 ```
 
+<img width="650" alt="uml_sequence_diagram" src="https://github.com/user-attachments/assets/e120ab66-8000-4b21-a49a-7ee50d503cb6">
 
 
 
