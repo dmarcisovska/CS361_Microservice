@@ -43,7 +43,7 @@ async function run() {
 
     await new Promise((resolve) => {
       setTimeout(resolve, 500);
-    });
+    })
   }
 }
 

@@ -11,7 +11,7 @@ This microservice provides the current date and time information in a few differ
 
 Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/yourusername/current-date-time-microservice.git
+   git clone https://github.com/dmarcisovska/CS361_Microservice.git
    cd current-date-time-microservice
 ```
 
